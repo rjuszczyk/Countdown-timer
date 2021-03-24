@@ -17,16 +17,34 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
+
+val SfProDisplay = FontFamily(
+    Font(R.font.sf_pro_display_regular, FontWeight.Normal),
+    Font(R.font.sf_pro_display_light, FontWeight.Light),
+    Font(R.font.sf_pro_display_bold, FontWeight.Bold)
+)
 // Set of Material typography styles to start with
 val typography = Typography(
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = SfProDisplay,
         fontWeight = FontWeight.Normal,
+        fontSize = 14.sp
+    ),
+    button = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.W500,
         fontSize = 16.sp
+    ),
+    subtitle1 = TextStyle( //used by text input
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.W500,
+        fontSize = 4.sp
     )
         /* Other default text styles to override
     button = TextStyle(
